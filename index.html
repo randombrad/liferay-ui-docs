@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+<link rel="stylesheet" href="css/master.css" />
+<STYLE type="text/css">
+   .toc li {list-style-type: none }
+   dd {padding: 8px 16px}
+ </STYLE>
+<noscript>
+<link rel="stylesheet" href="css/mobile.min.css" />
+</noscript>
+<script>
+// Edit to suit your needs.
+var ADAPT_CONFIG = {
+  // Where is your CSS?
+  path: 'css/',
+
+  // false = Only run once, when page first loads.
+  // true = Change on window resize and page tilt.
+  dynamic: true,
+
+  // First range entry is the minimum.
+  // Last range entry is the maximum.
+  // Separate ranges by "to" keyword.
+  range: [
+    '0px    to 760px  = mobile.min.css',
+    '760px  to 980px  = 720.min.css',
+    '980px  to 1280px = 960.min.css',
+    '1280px to 1600px = 1200.min.css',
+    '1600px to 1940px = 1560.min.css',
+    '1940px to 2540px = 1920.min.css',
+    '2540px           = 2520.min.css'
+  ]
+};
+</script>
+<script src="js/adapt.min.js"></script>
+</head>
+<body>
+<div class="container_12">
+<div class="grid_3 toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#velocity">Velocity</a><ul>
+<li><a href="#ifelse-statement">If/Else Statement</a></li>
+<li><a href="#math-functions">Math Functions</a></li>
+</ul></li>
+</ul>
+</div> <!-- Grid 3 -->
+<div class="grid_9 content">
+<h1 id="introduction"><a href="#TOC">Introduction</a></h1>
+<p>The purpose of this guide is to help Liferay front-end developers to code with similar methods and practices. This guide can be used for quick reference to learn the Liferay way.</p>
+<hr>
+<h1 id="velocity"><a href="#TOC">Velocity</a></h1>
+<p>Today's audience can choose from quite a large pool of web browsers, each providing a slightly (or dramatically) different experience. As developers, it is our responsibility to choose just how the web pages we build are displayed to those users. This section describes how we, at Isobar, make some of these key decisions.</p>
+<h2 id="ifelse-statement"><a href="#TOC">If/Else Statement</a></h2>
+<pre><code>#set($foo = 1)
+#if($foo == 1)
+    Foo is equals 1
+#else
+    Foo does not equal 1
+#end</code></pre>
+<p>Output: Foo is equals 1</p>
+<pre><code>#set($var = 1)
+#set($foo == 2)
+#set($total = add($var,$foo))
+$total</code></pre>
+<p>Output: 3</p>
+<h2 id="math-functions"><a href="#TOC">Math Functions</a></h2>
+<ul>
+<li>add() - Addition</li>
+<li>sub() - Subtraction</li>
+<li>mul() - Multiplication</li>
+<li>div() - Division</li>
+<li>pow() - Power of</li>
+<li>max() - Maximum of two numbers</li>
+<li>min() - Minimum of two numbers</li>
+<li>abs() - Absolute value of a number</li>
+<li>toDouble() - Converts a number into a double</li>
+</ul>
+<hr>
+</div> <!-- grid 9 -->
+</div> <!-- Containter 12 -->
+</body>
+</html>

@@ -83,7 +83,7 @@ $if(toc)$
 $toc$
 $endif$
 </div> <!-- Grid 3 -->
-<div class="grid_9">
+<div class="grid_9 content">
 $for(include-before)$
 $include-before$
 $endfor$

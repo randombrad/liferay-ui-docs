@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if test $# -eq 0 ; then
-   file_list=$(ls *.markdown)
+   file_list=$(ls *.md)
 else
    file_list=$@
 fi
