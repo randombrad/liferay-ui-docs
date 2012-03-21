@@ -42,7 +42,7 @@ var ADAPT_CONFIG = {
 <script src="js/adapt.min.js"></script>
 </head>
 <body>
-<a href="http://github.com/randombrad/liferay-ui-docs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a><div class="container_12">
+<div class="container_12">
 <div class="grid_3 toc">
 <h3>Table of Contents</h3>
 <ul>
@@ -52,6 +52,13 @@ var ADAPT_CONFIG = {
 </ul></li>
 <li><a href="#css">CSS</a><ul>
 <li><a href="#font-weight">Font-Weight</a></li>
+</ul></li>
+<li><a href="#layouts-and-columns">Layouts and Columns</a><ul>
+<li><a href="#layout-in-action">Layout in Action</a></li>
+<li><a href="#typography">Typography</a></li>
+<li><a href="#headings">Headings</a></li>
+<li><a href="#measure">Measure</a></li>
+<li><a href="#colors">Colors</a></li>
 </ul></li>
 <li><a href="#velocity">Velocity</a><ul>
 <li><a href="#ifelse-statement">If/Else Statement</a></li>
@@ -97,6 +104,37 @@ Use font-weight values (100-900) instead of name such as normal, bold, bolder. <
 <li>800 Heavy, Black, Extra-bold</li>
 <li>900 Ultra-black, Extra-black, Ultra-bold, Heavy-black, Fat, Poster</li>
 </ul>
+<hr>
+<h1 id="layouts-and-columns"><a href="#TOC">Layouts and Columns</a></h1>
+<p>The Liferay website uses the 960 Grid System for all pages on the site. The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a layout width of 960 pixels.</p>
+<p>Each page layout is divided into 12 even portions. Each portion is 60 pixels wide with 10 pixels of margin on the left and the right, with all 12 portions filling the available 960px width of the layout. <img src="./images/layout-fig1.jpg" alt="Layout Fig-1"></p>
+<p>Makes more sense when you see it, right?</p>
+<p>The page layout 960px was chosen for its size and divisibility. All modern monitors support at least 1024x768px of resolution, so 960px easily fits into this standard. The number of 960 is also a highly flexible base number, as it is divisible by 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 32, 40, 48, 60, 64, 80, 96, 120, 160, 192, 240, 320 and 480.</p>
+<figure>
+<img src="./images/layout-fig2.jpg" alt="Layout Fig-2"><figcaption>Layout Fig-2</figcaption>
+</figure>
+<h2 id="layout-in-action"><a href="#TOC">Layout in Action</a></h2>
+<p>A typical Liferay page layout will have a left column reserved for navigation. The left column will have a width of 220px, which is 1/4 the page layout. The remaining right column will have a width of 700px, which is 3/4 the page layout.</p>
+<figure>
+<img src="./images/layout-fig3.jpg" alt="Layout Fig-3"><figcaption>Layout Fig-3</figcaption>
+</figure>
+<h2 id="typography"><a href="#TOC">Typography</a></h2>
+<p>Strong typography forms the backbone of any brand identity; it is a major contributor to a brand's visual style and tone. Fonts are chosen with three key considerations: their fit with brand values, readability and flexibility of use. Limiting the number of fonts is key to maintaining a distinctive visual style and ease of brand management.</p>
+<p>The Liferay website chose one font; Helvetica! ... which really meant Arial for Windows, which meant yet another sans-serif for everbody else. Whenever possible, the website uses Arial at 12px for all text on the site.</p>
+<h2 id="headings"><a href="#TOC">Headings</a></h2>
+<p>Headings are pretty simple - they are big versions of the regular text. The website gives all H1 elements a 2.5em font size with a 0.4em bottom margin, which equates to a 30px font size with a 12px bottom margin. The website gives all H2, H3 elements a 1.333em font size with a 0.375em bottom margin, which equates to a 16px font size with a 6px bottom margin. The website gives all H4, H5, H6 elements a 1.166em font size with a 0.428em bottom margin, which equates to a 14px font size with a 6px bottom margin.</p>
+<p>Why didn't the Liferay website use straight-up pixels? The website uses pixels, but headings need flexibility. Word.</p>
+<h2 id="measure"><a href="#TOC">Measure</a></h2>
+<p>When a typographer refers to &quot;the measure&quot;, they mean the width of the text body. Simply put, when copy is too wide or poorly spaced it becomes difficult to read.</p>
+<p>The general rule for a comfortable measure is around 60 - 70 characters per line. Taking into account that each character averages out to around 0.5em in width, setting a measure of 33em should keep each line within the optimum range. Since the Liferay website defaults to a 12px Arial font, we would desire a number close to 396px (33 * 12). The closest and most ideal layout portions for the text body are therefore 5/12 (380px) and 1/2 (460px).</p>
+<figure>
+<img src="./images/layout-fig4.jpg" alt="Layout Fig-4"><figcaption>Layout Fig-4</figcaption>
+</figure>
+<h2 id="colors"><a href="#TOC">Colors</a></h2>
+<p>The Liferay website references color names by Resene Paints Ltd. as matched by the Name That Color website.</p>
+<figure>
+<img src="./images/colors-fig1.jpg" alt="Layout Fig-4"><figcaption>Layout Fig-4</figcaption>
+</figure>
 <hr>
 <h1 id="velocity"><a href="#TOC">Velocity</a></h1>
 <p>Today's audience can choose from quite a large pool of web browsers, each providing a slightly (or dramatically) different experience. As developers, it is our responsibility to choose just how the web pages we build are displayed to those users. This section describes how we, at Isobar, make some of these key decisions.</p>
