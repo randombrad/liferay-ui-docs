@@ -1,5 +1,8 @@
 # Naming
 
+## Images
+use underscore for spaces. use .jpg when possible, but if you need transparency then use png-24
+
 ## Web Content
 
 ## Structure

@@ -2,9 +2,9 @@
 
 Not all features will look great in all browsers, but we go by the principle "degrade gracefully", meaning that the functionality of the site is still in tact. For example CSS3 rounded borders won't display rounded in IE 6.
 
-* IE 6
+* IE 6 :(
 * IE 7
-* IE8
+* IE 8
 * FF 3.6
 * FF 4
 * FF 5

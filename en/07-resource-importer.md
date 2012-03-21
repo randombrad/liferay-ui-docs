@@ -23,8 +23,9 @@ Source File Folder Structure
 	- WEB-INF
 		- src
 			- resources-importer
-				archive.lar (optional)
+				- sitemap.json
 				- document_library
+					- documents
 				- journal
 					- articles
 						- Featured Content (name of template)
@@ -40,6 +41,111 @@ Source File Folder Structure
 
 ## .LAR
 After you place the web content where you want for the site template, export the site template as a [.lar]. rename is "archive.lar" and place it in the **resource-importer** folder of the theme.
+
+
+## Document Library
+place any resources that the web content needs into the document_library folder. Then in your .html or .xml file of the article reference the resource name like below:
+	
+	(.html)
+	<img src="[$FILE=My Image.jpg$]" />
+	<a href="[$FILE=My Document.pdf$]">Click Here</a>
+	
+	(.xml)
+	<![CDATA[[$FILE=carousel_2.png$]]]>
+
+## article
+for xml files make sure to add encoding="UTF-8" to the root element
+	
+## Example sitemap.json
+
+By default web content displays without a portlet border.
+
+	{
+		"layoutTemplateId": "2_columns_ii",
+		"layouts": [
+			{
+				"name": "Home",
+				"friendlyURL": "/home",
+				"columns": [
+					[
+						"Home Content.html"
+					],
+					[
+						"Home Carousel.xml"
+					]
+				]
+			},
+			{
+				"name": "Reservations",
+				"friendlyURL": "/reservations",
+				"layoutTemplateId": "3-3-3-columns",
+				"columns": [
+					[
+						{
+							"portletId": "56",
+							"portletPreferences": {
+								"articleId": "Welcome.html",
+								"groupId": "${groupId}",
+								"portletSetupShowBorders": "true",
+								"portletSetupUseCustomTitle": "true",
+								"portletSetupTitle_en_US": "Welcome"
+							}
+						}
+					],
+					[
+						{
+							"portletId": "56",
+							"portletPreferences": {
+								"articleId": "Luxurious Suites.html",
+								"groupId": "${groupId}",
+								"portletSetupShowBorders": "true",
+								"portletSetupUseCustomTitle": "true",
+								"portletSetupTitle_en_US": "Luxurious Suites"
+							}
+						}
+					],
+					[
+						{
+							"portletId": "56",
+							"portletPreferences": {
+								"articleId": "Every Room Has.html",
+								"groupId": "${groupId}",
+								"portletSetupShowBorders": "true",
+								"portletSetupUseCustomTitle": "true",
+								"portletSetupTitle_en_US": "Every Room Has:"
+							}
+						}
+					],
+					[
+						"Starting At.html"
+					],
+					[
+						"Image Gallery.html"
+					],
+					[
+						"Reserve Your Own Luxury Suite.html"
+					]
+				]
+			},
+			{
+				"name": "Rooms",
+				"friendlyURL": "/rooms"
+			},
+			{
+				"name": "Restaurant & Bar",
+				"friendlyURL": "/restaurant-bar"
+			},
+			{
+				"name": "About Us",
+				"friendlyURL": "/about-us"
+			},
+			{
+				"name": "Contact Us",
+				"friendlyURL": "/contact-us"
+			}
+		]
+	}
+
 
 -----------------------
 
