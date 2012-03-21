@@ -42,11 +42,17 @@ var ADAPT_CONFIG = {
 <script src="js/adapt.min.js"></script>
 </head>
 <body>
-<div class="container_12">
+<a href="http://github.com/randombrad/liferay-ui-docs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a><div class="container_12">
 <div class="grid_3 toc">
 <h3>Table of Contents</h3>
 <ul>
 <li><a href="#introduction">Introduction</a></li>
+<li><a href="#browsers">Browsers</a><ul>
+<li><a href="#ie6">IE6</a></li>
+</ul></li>
+<li><a href="#css">CSS</a><ul>
+<li><a href="#font-weight">Font-Weight</a></li>
+</ul></li>
 <li><a href="#velocity">Velocity</a><ul>
 <li><a href="#ifelse-statement">If/Else Statement</a></li>
 <li><a href="#math-functions">Math Functions</a></li>
@@ -56,6 +62,41 @@ var ADAPT_CONFIG = {
 <div class="grid_9 content">
 <h1 id="introduction"><a href="#TOC">Introduction</a></h1>
 <p>The purpose of this guide is to help Liferay front-end developers to code with similar methods and practices. This guide can be used for quick reference to learn the Liferay way.</p>
+<hr>
+<h1 id="browsers"><a href="#TOC">Browsers</a></h1>
+<p>Not all features will look great in all browsers, but we go by the principle &quot;degrade gracefully&quot;, meaning that the functionality of the site is still in tact. For example CSS3 rounded borders won't display rounded in IE 6.</p>
+<ul>
+<li>IE 6</li>
+<li>IE 7</li>
+<li>IE8</li>
+<li>FF 3.6</li>
+<li>FF 4</li>
+<li>FF 5</li>
+<li>Chrome</li>
+<li>Safari</li>
+<li>Opera</li>
+</ul>
+<h2 id="ie6"><a href="#TOC">IE6</a></h2>
+<p>.png files that have transparency don't display correctly. In Liferay you can add the class of &quot;png&quot; to the element that has the transparent image and it may fix the problem, but use this method sparingly.</p>
+<hr>
+<h1 id="css"><a href="#TOC">CSS</a></h1>
+<p>The second component of a web page is the presentation information contained in the Cascading Style Sheet (CSS). Web browsers successful implementation of CSS has given a whole generation of web authors site-wide control over the look and feel of their web sites.</p>
+<p>Just as the information on a web page is semantically described in the HTML Markup, CSS describes all presentation aspects of the page via a description of it's visual properties. CSS is powerful in that these properties are mixed and matched via identifiers to control the page's layout and visual characteristics through the layering of style rules (the &quot;cascade&quot;).</p>
+<h2 id="font-weight"><a href="#TOC">Font-Weight</a></h2>
+Use font-weight values (100-900) instead of name such as normal, bold, bolder. <a href="//www.w3.org/TR/CSS2/fonts.html#font-boldness">- W3 -</a>
+</p>
+<p>There can be confusion how to render the text based font-weight values</p>
+<ul>
+<li>100 Thin, Hairline, Ultra-light, Extra-light</li>
+<li>200 Light</li>
+<li>300 Book</li>
+<li>400 Regular, Normal, Plain, Roman, Standard</li>
+<li>500 Medium</li>
+<li>600 Semi-bold, Demi-bold</li>
+<li>700 Bold</li>
+<li>800 Heavy, Black, Extra-bold</li>
+<li>900 Ultra-black, Extra-black, Ultra-bold, Heavy-black, Fat, Poster</li>
+</ul>
 <hr>
 <h1 id="velocity"><a href="#TOC">Velocity</a></h1>
 <p>Today's audience can choose from quite a large pool of web browsers, each providing a slightly (or dramatically) different experience. As developers, it is our responsibility to choose just how the web pages we build are displayed to those users. This section describes how we, at Isobar, make some of these key decisions.</p>
