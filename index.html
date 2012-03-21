@@ -42,40 +42,56 @@ var ADAPT_CONFIG = {
 <script src="js/adapt.min.js"></script>
 </head>
 <body>
-<div class="container_12">
+<a href="http://github.com/randombrad/liferay-ui-docs" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a><div class="container_12">
 <div class="grid_3 toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#contribute">Contribute</a></li>
+</ul></li>
 <li><a href="#browsers">Browsers</a><ul>
 <li><a href="#ie6">IE6</a></li>
 </ul></li>
 <li><a href="#css">CSS</a><ul>
 <li><a href="#font-weight">Font-Weight</a></li>
 </ul></li>
-<li><a href="#layouts-and-columns">Layouts and Columns</a><ul>
-<li><a href="#layout-in-action">Layout in Action</a></li>
-<li><a href="#typography">Typography</a></li>
-<li><a href="#headings">Headings</a></li>
-<li><a href="#measure">Measure</a></li>
-<li><a href="#colors">Colors</a></li>
+<li><a href="#naming">Naming</a><ul>
+<li><a href="#web-content">Web Content</a></li>
+<li><a href="#structure">Structure</a></li>
+<li><a href="#template">Template</a></li>
+<li><a href="#layouts">Layouts</a></li>
+<li><a href="#css-1">CSS</a></li>
 </ul></li>
 <li><a href="#velocity">Velocity</a><ul>
 <li><a href="#ifelse-statement">If/Else Statement</a></li>
 <li><a href="#math-functions">Math Functions</a></li>
+<li><a href="#for-loop">For Loop</a><ul>
+<li><a href="#velocitycount">$VelocityCount</a></li>
+<li><a href="#velocityhasnext">$VelocityHasNext</a></li>
+<li><a href="#web-content-template-files">Web Content Template Files</a></li>
+<li><a href="#theme-template-files">Theme Template Files</a></li>
+<li><a href="#accessing-localservice">Accessing LocalService</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#resource-importer">Resource Importer</a><ul>
+<li><a href="#marketplace-package-file">Marketplace Package File</a></li>
+<li><a href="#web-content-source">Web Content Source</a></li>
+<li><a href="#lar">.LAR</a></li>
 </ul></li>
 </ul>
 </div> <!-- Grid 3 -->
 <div class="grid_9 content">
 <h1 id="introduction"><a href="#TOC">Introduction</a></h1>
 <p>The purpose of this guide is to help Liferay front-end developers to code with similar methods and practices. This guide can be used for quick reference to learn the Liferay way.</p>
+<h2 id="contribute"><a href="#TOC">Contribute</a></h2>
+<p>As of right now the raw markdown files are located at <a href="https://github.com/randombrad/liferay-docs"><code class="url">https://github.com/randombrad/liferay-docs</code></a> under the folder of uiGuide submit a pull request to github user <strong>randombrad</strong></p>
 <hr>
 <h1 id="browsers"><a href="#TOC">Browsers</a></h1>
 <p>Not all features will look great in all browsers, but we go by the principle &quot;degrade gracefully&quot;, meaning that the functionality of the site is still in tact. For example CSS3 rounded borders won't display rounded in IE 6.</p>
 <ul>
-<li>IE 6</li>
+<li>IE 6 :(</li>
 <li>IE 7</li>
-<li>IE8</li>
+<li>IE 8</li>
 <li>FF 3.6</li>
 <li>FF 4</li>
 <li>FF 5</li>
@@ -105,36 +121,22 @@ Use font-weight values (100-900) instead of name such as normal, bold, bolder. <
 <li>900 Ultra-black, Extra-black, Ultra-bold, Heavy-black, Fat, Poster</li>
 </ul>
 <hr>
-<h1 id="layouts-and-columns"><a href="#TOC">Layouts and Columns</a></h1>
-<p>The Liferay website uses the 960 Grid System for all pages on the site. The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a layout width of 960 pixels.</p>
-<p>Each page layout is divided into 12 even portions. Each portion is 60 pixels wide with 10 pixels of margin on the left and the right, with all 12 portions filling the available 960px width of the layout. <img src="./images/layout-fig1.jpg" alt="Layout Fig-1"></p>
-<p>Makes more sense when you see it, right?</p>
-<p>The page layout 960px was chosen for its size and divisibility. All modern monitors support at least 1024x768px of resolution, so 960px easily fits into this standard. The number of 960 is also a highly flexible base number, as it is divisible by 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 32, 40, 48, 60, 64, 80, 96, 120, 160, 192, 240, 320 and 480.</p>
+<h1 id="naming"><a href="#TOC">Naming</a></h1>
+<h2 id="web-content"><a href="#TOC">Web Content</a></h2>
+<h2 id="structure"><a href="#TOC">Structure</a></h2>
+<h2 id="template"><a href="#TOC">Template</a></h2>
+<h2 id="layouts"><a href="#TOC">Layouts</a></h2>
+<p>Count the number of columns starting from top to bottom, left to right</p>
 <figure>
-<img src="./images/layout-fig2.jpg" alt="Layout Fig-2"><figcaption>Layout Fig-2</figcaption>
+<img src="./images/1_2_3_columns.jpg" alt="Layout 1-2-3-columns"><figcaption>Layout 1-2-3-columns</figcaption>
 </figure>
-<h2 id="layout-in-action"><a href="#TOC">Layout in Action</a></h2>
-<p>A typical Liferay page layout will have a left column reserved for navigation. The left column will have a width of 220px, which is 1/4 the page layout. The remaining right column will have a width of 700px, which is 3/4 the page layout.</p>
 <figure>
-<img src="./images/layout-fig3.jpg" alt="Layout Fig-3"><figcaption>Layout Fig-3</figcaption>
+<img src="./images/2_1_2_columns.jpg" alt="Layout 2-1-2-columns"><figcaption>Layout 2-1-2-columns</figcaption>
 </figure>
-<h2 id="typography"><a href="#TOC">Typography</a></h2>
-<p>Strong typography forms the backbone of any brand identity; it is a major contributor to a brand's visual style and tone. Fonts are chosen with three key considerations: their fit with brand values, readability and flexibility of use. Limiting the number of fonts is key to maintaining a distinctive visual style and ease of brand management.</p>
-<p>The Liferay website chose one font; Helvetica! ... which really meant Arial for Windows, which meant yet another sans-serif for everbody else. Whenever possible, the website uses Arial at 12px for all text on the site.</p>
-<h2 id="headings"><a href="#TOC">Headings</a></h2>
-<p>Headings are pretty simple - they are big versions of the regular text. The website gives all H1 elements a 2.5em font size with a 0.4em bottom margin, which equates to a 30px font size with a 12px bottom margin. The website gives all H2, H3 elements a 1.333em font size with a 0.375em bottom margin, which equates to a 16px font size with a 6px bottom margin. The website gives all H4, H5, H6 elements a 1.166em font size with a 0.428em bottom margin, which equates to a 14px font size with a 6px bottom margin.</p>
-<p>Why didn't the Liferay website use straight-up pixels? The website uses pixels, but headings need flexibility. Word.</p>
-<h2 id="measure"><a href="#TOC">Measure</a></h2>
-<p>When a typographer refers to &quot;the measure&quot;, they mean the width of the text body. Simply put, when copy is too wide or poorly spaced it becomes difficult to read.</p>
-<p>The general rule for a comfortable measure is around 60 - 70 characters per line. Taking into account that each character averages out to around 0.5em in width, setting a measure of 33em should keep each line within the optimum range. Since the Liferay website defaults to a 12px Arial font, we would desire a number close to 396px (33 * 12). The closest and most ideal layout portions for the text body are therefore 5/12 (380px) and 1/2 (460px).</p>
-<figure>
-<img src="./images/layout-fig4.jpg" alt="Layout Fig-4"><figcaption>Layout Fig-4</figcaption>
-</figure>
-<h2 id="colors"><a href="#TOC">Colors</a></h2>
-<p>The Liferay website references color names by Resene Paints Ltd. as matched by the Name That Color website.</p>
-<figure>
-<img src="./images/colors-fig1.jpg" alt="Layout Fig-4"><figcaption>Layout Fig-4</figcaption>
-</figure>
+<h2 id="css-1"><a href="#TOC">CSS</a></h2>
+<ul>
+<li>Class / Id: lowercased and use &quot;-&quot; for spaces</li>
+</ul>
 <hr>
 <h1 id="velocity"><a href="#TOC">Velocity</a></h1>
 <p>Today's audience can choose from quite a large pool of web browsers, each providing a slightly (or dramatically) different experience. As developers, it is our responsibility to choose just how the web pages we build are displayed to those users. This section describes how we, at Isobar, make some of these key decisions.</p>
@@ -163,6 +165,65 @@ $total</code></pre>
 <li>abs() - Absolute value of a number</li>
 <li>toDouble() - Converts a number into a double</li>
 </ul>
+<h2 id="for-loop"><a href="#TOC">For Loop</a></h2>
+<p>Display each of the items that are stored in $nav_items array</p>
+<pre><code>#foreach ($nav_item in $nav_items)
+    $nav_item.data
+#end</code></pre>
+<h3 id="velocitycount"><a href="#TOC">$VelocityCount</a></h3>
+<p>displays the index of the for loop that its nested within. This variable starts at 1</p>
+<pre><code>#foreach ($nav_item in $nav_items)
+    #if($velocityCount == 1)
+        This is the first item of the list
+    #end
+#end</code></pre>
+<h3 id="velocityhasnext"><a href="#TOC">$VelocityHasNext</a></h3>
+<p>This variable is a boolean that returns true/false if the current iteration has a next sibling.</p>
+<pre><code>#foreach ($nav_item in $nav_items)
+    #if(!$velocityHasNext)
+        This is the last item of the list
+    #end
+#end</code></pre>
+<h3 id="web-content-template-files"><a href="#TOC">Web Content Template Files</a></h3>
+<p>Limited Access. There isn't direct access to $nav_items</p>
+<h3 id="theme-template-files"><a href="#TOC">Theme Template Files</a></h3>
+<pre><code>- templates
+    - init_custom.vm
+    - navigation.vm
+    - portal_normal.vm</code></pre>
+<h3 id="accessing-localservice"><a href="#TOC">Accessing LocalService</a></h3>
+<hr>
+<h1 id="resource-importer"><a href="#TOC">Resource Importer</a></h1>
+<p>This is a web resource that was built by <a href="http://www.liferay.com/web/ryan.park/profile">Ryan Park</a>. Its located in the Liferay Plugins <a href="https://github.com/liferay/liferay-plugins/tree/master/webs/resources-importer-web">liferay-plugins/web/resources-importer-web</a></p>
+<p>The purpose is to import web content that is stored in the theme, and create a site template that can display default web content for a particular theme.</p>
+<h2 id="marketplace-package-file"><a href="#TOC">Marketplace Package File</a></h2>
+<p>Make sure to include the resources-importer-web.war file and the theme inside of a Liferay Package File (.lpkg)</p>
+<pre><code>- lithe-theme.lpkg
+    - resources-importer-web.war
+    - lithe-theme.war</code></pre>
+<h2 id="web-content-source"><a href="#TOC">Web Content Source</a></h2>
+<p>Use <strong><a href="http://www.editage.co.kr/resources/pdf/case.pdf">title case</a></strong> [ex. Featured Content] for both folder and files within (articles, structures, templates) required folders</p>
+<p><strong>articles</strong> - group articles by a folder that matches the name of the <strong>template</strong> file<br><strong>structures</strong> - no folders only structure .xml files<br><strong>templates</strong> - group templates by a folder matches the name of the <strong>structure</strong> file</p>
+<p>Source File Folder Structure</p>
+<pre><code>- WEB-INF
+    - src
+        - resources-importer
+            archive.lar (optional)
+            - document_library
+            - journal
+                - articles
+                    - Featured Content (name of template)
+                        - Exceptional Support.xml
+                        - Our Goal.xml
+                        - The Experience.xml
+                - structures
+                    - Featured Content.xml
+                - templates
+                    - Featured Content [structure name]
+                        - Featured Content.vm
+                        - Featured Content2.vm</code></pre>
+<h2 id="lar"><a href="#TOC">.LAR</a></h2>
+<p>After you place the web content where you want for the site template, export the site template as a [.lar]. rename is &quot;archive.lar&quot; and place it in the <strong>resource-importer</strong> folder of the theme.</p>
 <hr>
 </div> <!-- grid 9 -->
 </div> <!-- Containter 12 -->
