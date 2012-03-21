@@ -19,3 +19,9 @@ There can be confusion how to render the text based font-weight values
 
 -----------------------
 
+## Source Formatting
+When multiple items referenced it should be in one line
+
+	EX: #navigation, #navigation .child-menu, #navigation li {
+		
+	}
