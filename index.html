@@ -46,9 +46,7 @@ var ADAPT_CONFIG = {
 <div class="grid_3 toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#introduction">Introduction</a><ul>
-<li><a href="#contribute">Contribute</a></li>
-</ul></li>
+<li><a href="#introduction">Introduction</a></li>
 <li><a href="#browsers">Browsers</a><ul>
 <li><a href="#ie6">IE6</a></li>
 </ul></li>
@@ -65,13 +63,6 @@ var ADAPT_CONFIG = {
 <li><a href="#velocity">Velocity</a><ul>
 <li><a href="#ifelse-statement">If/Else Statement</a></li>
 <li><a href="#math-functions">Math Functions</a></li>
-<li><a href="#for-loop">For Loop</a><ul>
-<li><a href="#velocitycount">$VelocityCount</a></li>
-<li><a href="#velocityhasnext">$VelocityHasNext</a></li>
-<li><a href="#web-content-template-files">Web Content Template Files</a></li>
-<li><a href="#theme-template-files">Theme Template Files</a></li>
-<li><a href="#accessing-localservice">Accessing LocalService</a></li>
-</ul></li>
 </ul></li>
 <li><a href="#resource-importer">Resource Importer</a><ul>
 <li><a href="#marketplace-package-file">Marketplace Package File</a></li>
@@ -83,15 +74,13 @@ var ADAPT_CONFIG = {
 <div class="grid_9 content">
 <h1 id="introduction"><a href="#TOC">Introduction</a></h1>
 <p>The purpose of this guide is to help Liferay front-end developers to code with similar methods and practices. This guide can be used for quick reference to learn the Liferay way.</p>
-<h2 id="contribute"><a href="#TOC">Contribute</a></h2>
-<p>As of right now the raw markdown files are located at <a href="https://github.com/randombrad/liferay-docs"><code class="url">https://github.com/randombrad/liferay-docs</code></a> under the folder of uiGuide submit a pull request to github user <strong>randombrad</strong></p>
 <hr>
 <h1 id="browsers"><a href="#TOC">Browsers</a></h1>
 <p>Not all features will look great in all browsers, but we go by the principle &quot;degrade gracefully&quot;, meaning that the functionality of the site is still in tact. For example CSS3 rounded borders won't display rounded in IE 6.</p>
 <ul>
-<li>IE 6 :(</li>
+<li>IE 6</li>
 <li>IE 7</li>
-<li>IE 8</li>
+<li>IE8</li>
 <li>FF 3.6</li>
 <li>FF 4</li>
 <li>FF 5</li>
@@ -165,33 +154,6 @@ $total</code></pre>
 <li>abs() - Absolute value of a number</li>
 <li>toDouble() - Converts a number into a double</li>
 </ul>
-<h2 id="for-loop"><a href="#TOC">For Loop</a></h2>
-<p>Display each of the items that are stored in $nav_items array</p>
-<pre><code>#foreach ($nav_item in $nav_items)
-    $nav_item.data
-#end</code></pre>
-<h3 id="velocitycount"><a href="#TOC">$VelocityCount</a></h3>
-<p>displays the index of the for loop that its nested within. This variable starts at 1</p>
-<pre><code>#foreach ($nav_item in $nav_items)
-    #if($velocityCount == 1)
-        This is the first item of the list
-    #end
-#end</code></pre>
-<h3 id="velocityhasnext"><a href="#TOC">$VelocityHasNext</a></h3>
-<p>This variable is a boolean that returns true/false if the current iteration has a next sibling.</p>
-<pre><code>#foreach ($nav_item in $nav_items)
-    #if(!$velocityHasNext)
-        This is the last item of the list
-    #end
-#end</code></pre>
-<h3 id="web-content-template-files"><a href="#TOC">Web Content Template Files</a></h3>
-<p>Limited Access. There isn't direct access to $nav_items</p>
-<h3 id="theme-template-files"><a href="#TOC">Theme Template Files</a></h3>
-<pre><code>- templates
-    - init_custom.vm
-    - navigation.vm
-    - portal_normal.vm</code></pre>
-<h3 id="accessing-localservice"><a href="#TOC">Accessing LocalService</a></h3>
 <hr>
 <h1 id="resource-importer"><a href="#TOC">Resource Importer</a></h1>
 <p>This is a web resource that was built by <a href="http://www.liferay.com/web/ryan.park/profile">Ryan Park</a>. Its located in the Liferay Plugins <a href="https://github.com/liferay/liferay-plugins/tree/master/webs/resources-importer-web">liferay-plugins/web/resources-importer-web</a></p>

@@ -29,46 +29,6 @@ Output: 3
 * abs() - Absolute value of a number
 * toDouble() - Converts a number into a double
 
-## For Loop
-Display each of the items that are stored in $nav_items array
-
-	#foreach ($nav_item in $nav_items)
-		$nav_item.data
-	#end
-
-### $VelocityCount
-displays the index of the for loop that its nested within. This variable starts at 1
-
-	#foreach ($nav_item in $nav_items)
-		#if($velocityCount == 1)
-			This is the first item of the list
-		#end
-	#end
-
-
-### $VelocityHasNext
-This variable is a boolean that returns true/false if the current iteration has a next sibling.
-
-	#foreach ($nav_item in $nav_items)
-		#if(!$velocityHasNext)
-			This is the last item of the list
-		#end
-	#end
-	
-### Web Content Template Files
-Limited Access. There isn't direct access to $nav_items
-
-### Theme Template Files
-
-	- templates
-		- init_custom.vm
-		- navigation.vm
-		- portal_normal.vm
-
-### Accessing LocalService
-
-
-
 ----------------------
 
 
